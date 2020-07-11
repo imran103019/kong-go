@@ -65,7 +65,7 @@ func (conf config) Access(kong *pdk.PDK) {
     }
 
     if err := json.NewDecoder(resp.Body).Decode(&result); err != nil {
-        kong.Log.Err(fmt.Sprintf("Auth svc json decode error: %d", err.Error()))
+        kong.Log.Err(fmt.Sprintf("Auth svc json decode error: %s", err.Error()))
         kong.Response.Exit(http.StatusInternalServerError, err.Error(), headers)
     }
     if resp.StatusCode != http.StatusOK {
