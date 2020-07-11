@@ -1,0 +1,9 @@
+# go.yml
+_format_version: "1.1"
+services:
+- url: https://reqres.in
+  routes:
+  - paths:
+    - "/req"
+  plugins:
+  - name: custom-auth-checker
