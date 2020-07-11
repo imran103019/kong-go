@@ -6,4 +6,13 @@ services:
   - paths:
     - "/req"
   plugins:
-  - name: custom-auth-checker
+  - name: custom-auth
+
+- url: https://jsonplaceholder.typicode.com
+  routes:
+  - paths:
+    - "/typicode"
+  plugins:
+  - name: api-key
+    config:
+      apikey: cxt

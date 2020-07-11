@@ -29,7 +29,7 @@ func (conf config) Access(kong *pdk.PDK) {
     headers["Content-Type"] = append(headers["Content-Type"], "application/json")
     if err != nil {
         kong.Log.Err("No authorization token provided!")
-        kong.Response.Exit(http.StatusUnauthorized, "Unauthorized", headers)
+        kong.Response.Exit(http.StatusUnauthorized, "No Authorization Token Provided", headers)
         return
     }
 

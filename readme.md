@@ -1,6 +1,6 @@
-# KONG API GATEWAY
+# KONG API GATEWAY (DB LESS)
 
-#### WITH GO CUSTOM AUTH PLUGIN
+#### WITH GO CUSTOM AUTH AND API-KEY PLUGIN
 
 ```bash
 # Get Repository
@@ -11,10 +11,10 @@ $ cd kong-go
 
 # Setup 
 1.Modify your services and paths in config.yaml file
-2.Change authSvc and Response struct in custom-auth-checker.go file based on your requirement
+2.Change authSvc and Response struct in plugins/custom-auth.go file based on your requirment
 
 # Start Server
-$ docker-compose up --build
+$ ./run.sh
 
 
 ```
